@@ -15,7 +15,7 @@ export function ListStudent(){
         <>
             <h1>List Student</h1>
             {list.map((item,key) => (
-                <Link to={"/edit-student" +item.id}>
+                <Link to={"/edit-student/" + item.id}>
                     <h3>{item.name} : {item.description} : {item.action} : {item.score}</h3>
                 </Link>
             ))}
