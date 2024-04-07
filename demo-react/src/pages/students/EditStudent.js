@@ -39,9 +39,10 @@ export function EditStudent() {
     };
 
     const handleDelete = () => {
+        if (window.confirm("Bạn có chắc chắn muốn xóa sinh viên này?"))
         axios.delete(`http://localhost:3001/students/${id}`)
             .then(res => {
-                console.log("Student deleted successfully");
+                alert("Xoa thanh cong")
                 navigate('/');
             })
     };
