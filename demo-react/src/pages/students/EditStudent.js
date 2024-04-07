@@ -36,7 +36,14 @@ export function EditStudent() {
             .then(res => {
                 navigate('/')
             })
+    };
 
+    const handleDelete = () => {
+        axios.delete(`http://localhost:3001/students/${id}`)
+            .then(res => {
+                console.log("Student deleted successfully");
+                navigate('/');
+            })
     };
 
     return (
@@ -49,6 +56,8 @@ export function EditStudent() {
                 <input type="text" name="score" value={student.score} onChange={handleChange} />
                 <button type="submit" >Submit</button>
             </form>
+            <button onClick={handleDelete}>Xóa sinh viên</button>
+
         </>
     );
 }
