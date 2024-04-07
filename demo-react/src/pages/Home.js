@@ -1,6 +1,7 @@
 import {Header} from "../components/Header";
 import {Footer} from "../components/Footer";
 import {Navbar} from "../components/Navbar";
+import {Outlet} from "react-router-dom";
 
 export function Home (){
     return(
@@ -9,7 +10,7 @@ export function Home (){
             <hr/>
             <Navbar></Navbar>
             <hr/>
-            <h1>HOME PAGE</h1>
+            <Outlet></Outlet>
             <hr/>
             <Footer/>
         </div>
