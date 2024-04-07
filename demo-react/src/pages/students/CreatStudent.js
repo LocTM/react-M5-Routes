@@ -37,7 +37,7 @@ export function CreatStudent(){
                 validationSchema={validateSchema}
                 onSubmit={(values)=>{
                     axios.post("http://localhost:3001/students" , values).then(()=> {
-                        alert("thanh cong")
+                        navigate('/')
                     })
                 }}
             >
