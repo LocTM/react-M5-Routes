@@ -3,8 +3,8 @@ import {Admin} from "./pages/Admin";
 import {Route, Routes} from "react-router-dom";
 import {ListStudent} from "./pages/students/ListStudent";
 import {CreatStudent} from "./pages/students/CreatStudent";
-import {Editstudent} from "./pages/students/Editstudent";
 import React from "react";
+import {EditStudent} from "./pages/students/EditStudent";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
               <Route path={'/'} element={<Home></Home>}>
                   <Route path={'/'} element={<ListStudent></ListStudent>}></Route>
                   <Route path={'/create-student'} element={<CreatStudent></CreatStudent>}></Route>
-                  <Route path={'/eidt/:id'} element={<Editstudent></Editstudent>}></Route>
+                  <Route path={'/edit-student/:id'} element={<EditStudent></EditStudent>}></Route>
               </Route>
               <Route path={'admin'} element={<Admin></Admin>}></Route>
           </Routes>
